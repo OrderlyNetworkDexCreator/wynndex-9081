@@ -18,7 +18,7 @@ window.__RUNTIME_CONFIG__ = {
   "VITE_APP_DESCRIPTION": "The best DEX to start wynning",
   "VITE_HAS_PRIMARY_LOGO": "true",
   "VITE_HAS_SECONDARY_LOGO": "true",
-  "VITE_ENABLED_MENUS": "Trading,Markets,Portfolio,Rewards,Vaults,Leaderboard",
+  "VITE_ENABLED_MENUS": "Trading,Markets,Portfolio,Rewards,Leaderboard",
   "VITE_CUSTOM_MENUS": "About WYNN DEX,/about",
   "VITE_ENABLE_SERVICE_DISCLAIMER_DIALOG": "true",
   "VITE_ENABLE_CAMPAIGNS": "false",
