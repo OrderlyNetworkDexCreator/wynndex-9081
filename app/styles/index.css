@@ -19,3 +19,24 @@
 .oui-scaffold-root .oui-scaffold-topNavbar>header a>img {
   height: 85px !important;
 }
+
+.oui-main-nav button[data-actived] {
+  transition: background-color 160ms ease, box-shadow 160ms ease, color 160ms ease;
+}
+
+.oui-main-nav button[data-actived]:hover,
+.oui-main-nav button[data-actived]:focus-visible {
+  background: rgba(3, 255, 0, 0.12) !important;
+  box-shadow:
+    0 0 10px rgba(3, 255, 0, 0.65),
+    0 0 24px rgba(3, 255, 0, 0.35),
+    inset 0 0 12px rgba(3, 255, 0, 0.12);
+  color: rgb(3, 255, 0) !important;
+}
+
+.oui-main-nav button[data-actived]:hover span,
+.oui-main-nav button[data-actived]:focus-visible span {
+  text-shadow:
+    0 0 6px rgba(3, 255, 0, 0.85),
+    0 0 14px rgba(3, 255, 0, 0.45);
+}
