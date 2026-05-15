@@ -16,7 +16,7 @@
   min-height: 88px;
   background:
     linear-gradient(rgba(2, 14, 5, 0.64), rgba(2, 14, 5, 0.64)),
-    url("/matrix.png") left center / auto 100% repeat-x,
+    url("/matrix-desktop.png") left center / auto 100% repeat-x,
     rgb(var(--oui-color-base-9)) !important;
   box-shadow:
     inset 0 -1px 0 rgba(3, 255, 0, 0.28),
@@ -32,6 +32,19 @@
 
 .oui-scaffold-root .oui-scaffold-topNavbar>header a:has(> img[alt="logo"]) {
   flex-shrink: 0;
+}
+
+@media (min-width: 1024px) {
+
+  .oui-scaffold-root .oui-scaffold-topNavbar>header,
+  .oui-scaffold-root .oui-scaffold-topNavbar>header a,
+  .oui-scaffold-root .oui-scaffold-topNavbar>header span {
+    color: #ffffff !important;
+  }
+
+  .oui-scaffold-root .oui-scaffold-topNavbar>header button[data-testid="oui-testid-nav-bar-address-btn"] span {
+    color: inherit !important;
+  }
 }
 
 .oui-main-nav button[data-actived] {
