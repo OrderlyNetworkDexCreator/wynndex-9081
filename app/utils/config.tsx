@@ -104,7 +104,7 @@ const getCustomMenuItems = (): MainNavItem[] => {
       validCustomMenus.push({
         name,
         href,
-        target: "_blank",
+        target: href.startsWith("/") ? undefined : "_blank",
       });
     }
 
@@ -283,6 +283,8 @@ export const useOrderlyConfig = () => {
 
     const enabledMenus = getEnabledMenus(allMenuItems, defaultEnabledMenus);
     const customMenus = getCustomMenuItems();
+    const internalCustomMenus = customMenus.filter((menu) => !menu.target);
+    const externalCustomMenus = customMenus.filter((menu) => menu.target);
 
     const translatedEnabledMenus = enabledMenus.map((menu) => ({
       name: menu.name,
@@ -343,8 +345,8 @@ export const useOrderlyConfig = () => {
           >
             {isMobile && (
               <CustomLeftNav
-                menus={translatedEnabledMenus}
-                externalLinks={customMenus}
+                menus={[...translatedEnabledMenus, ...internalCustomMenus]}
+                externalLinks={externalCustomMenus}
               />
             )}
             <Link to="/">

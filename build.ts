@@ -14,6 +14,7 @@ const STATIC_ROUTES = [
   "/leaderboard",
   "/swap",
   "/points",
+  "/about",
 ];
 
 interface SymbolInfo {

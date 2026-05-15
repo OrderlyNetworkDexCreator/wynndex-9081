@@ -35,6 +35,8 @@ const SwapLayout = lazy(() => import('./pages/swap/Layout'));
 const SwapIndex = lazy(() => import('./pages/swap/Index'));
 const PointsLayout = lazy(() => import('./pages/points/Layout'));
 const PointsIndex = lazy(() => import('./pages/points/Index'));
+const AboutLayout = lazy(() => import('./pages/about/Layout'));
+const AboutIndex = lazy(() => import('./pages/about/Index'));
 
 
 async function loadRuntimeConfig() {
@@ -151,6 +153,13 @@ const router = createBrowserRouter([
           { index: true, element: <PointsIndex /> },
         ],
       },
+      {
+        path: 'about',
+        element: <AboutLayout />,
+        children: [
+          { index: true, element: <AboutIndex /> },
+        ],
+      },
     ],
   },
 ], { basename: basePath });
@@ -179,4 +188,3 @@ if ('serviceWorker' in navigator) {
       });
   });
 }
-
