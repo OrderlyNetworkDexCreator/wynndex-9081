@@ -351,7 +351,7 @@ export const useOrderlyConfig = () => {
             )}
             <Link to="/">
               {isMobile &&
-              getRuntimeConfigBoolean("VITE_HAS_SECONDARY_LOGO") ? (
+                getRuntimeConfigBoolean("VITE_HAS_SECONDARY_LOGO") ? (
                 <img
                   src={withBasePath("/logo-secondary.webp")}
                   alt="logo"
@@ -405,14 +405,14 @@ export const useOrderlyConfig = () => {
         appIcons: {
           main: getRuntimeConfigBoolean("VITE_HAS_PRIMARY_LOGO")
             ? {
-                component: (
-                  <img
-                    src={withBasePath("/logo.webp")}
-                    alt="logo"
-                    style={{ height: "42px" }}
-                  />
-                ),
-              }
+              component: (
+                <img
+                  src={withBasePath("/logo.webp")}
+                  alt="logo"
+                  style={{ height: "85px" }}
+                />
+              ),
+            }
             : { img: withBasePath("/orderly-logo.svg") },
           secondary: {
             img: getRuntimeConfigBoolean("VITE_HAS_SECONDARY_LOGO")
